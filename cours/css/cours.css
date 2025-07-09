@@ -1,0 +1,179 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+  margin: 0;
+  padding: 0 0 40px 0;
+}
+
+h1, h2, h3 {
+  color: #2a4d7a;
+  margin-top: 32px;
+}
+
+h1 {
+  border-bottom: 2px solid #2a4d7a;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+h2 {
+  margin-top: 28px;
+  font-size: 1.3em;
+}
+
+pre {
+  background: #e3e9f3;
+  border-radius: 6px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  margin: 12px 0 24px 0;
+  font-size: 1em;
+}
+
+code {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  color: #1a3a5a;
+}
+
+article {
+  background: #fff;
+  border: 1px solid #d1dbe8;
+  border-radius: 8px;
+  padding: 18px 24px;
+  margin: 24px 0;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.important {
+  font-weight: bold;
+  color: #b30000;
+}
+
+#unique {
+  background: #fffbe6;
+  color: #222;
+  border-left: 4px solid #ffe066;
+  padding-left: 8px;
+}
+
+hr {
+  margin: 40px 0 32px 0;
+  border: none;
+  border-top: 2px dashed #b0c4de;
+}
+
+p {
+  line-height: 1.7;
+  margin: 12px 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 32px auto 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px #0002;
+  padding: 32px 36px;
+}
+
+/* Sélecteur descendant avancé */
+section p {
+  color: green;
+}
+
+/* Sélecteur adjacent (A+B) */
+h2 + p {
+  color: orange;
+  font-style: italic;
+}
+
+/* Sélecteur d'attribut */
+a[target="_blank"] {
+  color: #0077cc;
+  text-decoration: underline wavy;
+}
+
+/* Exemples de gestion du texte */
+.exemple-font-size {
+  font-size: 2em;
+}
+
+.exemple-font-family {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.exemple-font-style {
+  font-style: italic;
+}
+
+.exemple-font-weight {
+  font-weight: bold;
+}
+
+.exemple-text-decoration {
+  text-decoration: underline wavy red;
+}
+
+.exemple-text-align {
+  text-align: center;
+}
+
+.exemple-float {
+  float: right;
+  width: 200px;
+  background: #e3e9f3;
+  margin: 0 0 12px 12px;
+  padding: 8px;
+  border-radius: 6px;
+}
+/* règle CSS de la police */
+@font-face {
+  font-family: 'MaPolicePerso';
+  src: url('../fonts/IndieFlower-Regular.ttf') format('truetype');
+}
+
+.exemple-font-face {
+  font-family: 'MaPolicePerso', cursive;
+}
+
+/* Exemples de gestion des couleurs */
+.exemple-color {
+  color: #e74c3c;
+}
+
+.exemple-bgcolor {
+  background-color: #f9e79f;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.exemple-hex {
+  color: #3498db;
+}
+
+.exemple-rgb {
+  color: rgb(46, 204, 113);
+}
+
+.exemple-rgba {
+  background-color: rgba(52, 152, 219, 0.3);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 4vw 40px 4vw;
+  }
+  article {
+    padding: 12px 8px;
+  }
+  pre {
+    font-size: 0.95em;
+  }
+  .container {
+    padding: 12px 4vw;
+  }
+}
+  

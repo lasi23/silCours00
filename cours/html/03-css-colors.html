@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gérer les couleurs en CSS</title>
+    <link rel="stylesheet" href="../../cours/css/cours.css">
+</head>
+<body>
+<div class="container">
+    <h1>Gérer les couleurs en CSS</h1>
+    <p>CSS permet de personnaliser les couleurs du texte, des fonds et de nombreux autres éléments. Voici les principales propriétés et notations :</p>
+
+    <h2>color</h2>
+    <p>Permet de changer la couleur du texte.</p>
+    <pre><code>.exemple-color {
+  color: #e74c3c;
+}</code></pre>
+    <p class="exemple-color">Texte en rouge (color)</p>
+
+    <h2>background-color</h2>
+    <p>Permet de changer la couleur de fond d’un élément.</p>
+    <pre><code>.exemple-bgcolor {
+  background-color: #f9e79f;
+  padding: 8px;
+  border-radius: 6px;
+}</code></pre>
+    <p class="exemple-bgcolor">Fond jaune pâle (background-color)</p>
+
+    <h2>Notation hexadécimale</h2>
+    <p>On peut définir une couleur avec un code hexadécimal, commençant par <code>#</code> suivi de 3 ou 6 chiffres/lettres.</p>
+    <pre><code>.exemple-hex {
+  color: #3498db;
+}</code></pre>
+    <p class="exemple-hex">Texte en bleu (hexadécimal)</p>
+
+    <h2>La fonction rgb()</h2>
+    <p>Permet de définir une couleur en précisant la quantité de rouge, vert et bleu (de 0 à 255).</p>
+    <pre><code>.exemple-rgb {
+  color: rgb(46, 204, 113);
+}</code></pre>
+    <p class="exemple-rgb">Texte en vert (rgb)</p>
+
+    <h2>La fonction rgba()</h2>
+    <p>Comme rgb(), mais avec un canal alpha (transparence) de 0 (transparent) à 1 (opaque).</p>
+    <pre><code>.exemple-rgba {
+  background-color: rgba(52, 152, 219, 0.3);
+  padding: 8px;
+  border-radius: 6px;
+}</code></pre>
+    <p class="exemple-rgba">Fond bleu transparent (rgba)</p>
+</div>
+</body>
+</html>
