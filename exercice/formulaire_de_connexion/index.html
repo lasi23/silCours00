@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Formulaire d'inscription</h3>
+    <div>
+            <div class="formulaire">
+                <form action="traitement.php" method="post">
+                    <label for="nom">Nom</label>
+                    <input type="text" name="nom" id="nom" minlength="8" maxlength="50"  required>
+                     <label for="prenom">Prénom</label>
+                    <input type="text" name="prenom" id="prenom" minlength="8" maxlength="20"  required><br>
+                    <label for="date_naissance">Date de naissance</label>
+                    <input type="date" name="date_naissance" id="date_naissance" required>
+                    <label for="profession">Profession</label>
+                    <input type="text" name="profession" id="profession" required><br>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" minlength="8" maxlength="50"  required>
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" id="password" minlength="5" maxlength="20"  required><br>
+                    <button>Envoyer</button>
+                </form>
+            </div>
+    </div>
+</body>
+</html>

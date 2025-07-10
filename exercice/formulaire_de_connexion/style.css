@@ -1,0 +1,38 @@
+h3 {
+    font-size: 40px;
+    text-align: center;
+    color: #333;
+}
+  
+.formulaire {
+    margin-top: 0%;
+    padding: auto;
+    margin-left: 25%;
+    width: 50%;
+    margin-left: 25%;
+    border: solid 10px #5758b4;
+    padding: 10px;
+    width: 40%;
+    background-color: #85abfd;
+}
+
+input {
+    width: 95%;
+    height: 30px;
+    margin: 10px;
+    padding: 4px;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+}
+
+button {
+    font-size: large;
+    width: 50%;
+    height: 30px;
+    margin-left: 25%;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 2px rgb(5, 240, 5);
+    background-color: #661a7b;
+    color: rgb(5, 240, 5);
+}
