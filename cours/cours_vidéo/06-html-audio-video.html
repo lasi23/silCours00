@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio & vidéo HTML</title>
+    <link rel="stylesheet" href="../cours_vidéo/cours (2).css">
+</head>
+<body>
+    <div class="container">
+        <h1>Intégrer de l’audio et de la vidéo en HTML5</h1>
+        <p>HTML5 permet d’intégrer facilement des fichiers audio et vidéo dans vos pages web, sans plugin externe. On peut aussi intégrer des vidéos de plateformes comme YouTube grâce à la balise <code>&lt;iframe&gt;</code>.</p>
+
+        <h2>1. La balise <code>&lt;audio&gt;</code></h2>
+        <p>Permet de lire un fichier audio (musique, podcast, bruitage…).</p>
+        <pre><code>&lt;audio src="/assets/audio/mon-son.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+        <audio src="../../assets/audio/Bullion - Blue Pedro (official vid).mp3" controls>Votre navigateur ne supporte pas l’audio.</audio>
+        <ul>
+            <li><code>controls</code> : affiche les contrôles (lecture, pause, volume…)</li>
+            <li><code>autoplay</code> : démarre automatiquement (souvent bloqué par les navigateurs)</li>
+            <li><code>loop</code> : lecture en boucle</li>
+            <li><code>muted</code> : commence en mode muet</li>
+        </ul>
+        <p>On peut proposer plusieurs formats pour une meilleure compatibilité :</p>
+        <pre><code>&lt;audio controls&gt;
+    &lt;source src="mon-son.mp3" type="audio/mpeg"&gt;
+    &lt;source src="mon-son.ogg" type="audio/ogg"&gt;
+    Votre navigateur ne supporte pas l’audio HTML5.
+&lt;/audio&gt;</code></pre>
+
+        <h2>2. La balise <code>&lt;video&gt;</code></h2>
+        <p>Permet d’intégrer une vidéo locale ou distante.</p>
+        <pre><code>&lt;video src="/assets/videos/ma-video.mp4" controls width="320" poster="/assets/images/drMario.png"&gt;&lt;/video&gt;</code></pre>
+        <video src="../../assets/videos/Bullion - Blue Pedro (official vid).mp4" controls width="320" poster="../../assets/images/drMario.png">Votre navigateur ne supporte pas la vidéo.</video>
+        <ul>
+            <li><code>controls</code> : affiche les contrôles</li>
+            <li><code>autoplay</code> : démarre automatiquement</li>
+            <li><code>loop</code> : lecture en boucle</li>
+            <li><code>muted</code> : commence en mode muet</li>
+            <li><code>poster</code> : image affichée avant la lecture</li>
+            <li><code>width</code>, <code>height</code> : dimensions de la vidéo</li>
+        </ul>
+        <p>Comme pour l’audio, on peut proposer plusieurs formats :</p>
+        <pre><code>&lt;video controls width="320" poster="miniature.jpg"&gt;
+    &lt;source src="ma-video.mp4" type="video/mp4"&gt;
+    &lt;source src="ma-video.webm" type="video/webm"&gt;
+    Votre navigateur ne supporte pas la vidéo HTML5.
+&lt;/video&gt;</code></pre>
+
+        <h2>3. Formats supportés</h2>
+        <ul>
+            <li><strong>Audio</strong> : MP3, OGG, WAV</li>
+            <li><strong>Vidéo</strong> : MP4 (H.264), WebM, OGG</li>
+        </ul>
+        <p>Vérifiez la compatibilité selon vos besoins : <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Supported_media_formats" target="_blank">MDN - Formats supportés</a></p>
+
+        <h2>4. Intégrer une vidéo YouTube ou externe avec <code>&lt;iframe&gt;</code></h2>
+        <p>Pour afficher une vidéo YouTube, copiez le code d’intégration fourni par YouTube ou utilisez la balise <code>&lt;iframe&gt;</code> :</p>
+        <pre><code>&lt;iframe width="400" height="225" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allowfullscreen></iframe>
+
+        <h2>Bonnes pratiques</h2>
+        <ul>
+            <li>Proposez plusieurs formats pour une compatibilité maximale.</li>
+            <li>Ajoutez toujours l’attribut <code>controls</code> pour l’accessibilité.</li>
+            <li>Utilisez <code>poster</code> pour les vidéos afin d’afficher une image avant lecture.</li>
+            <li>Respectez les droits d’auteur pour les médias utilisés.</li>
+        </ul>
+
+        <hr>
+        <p>Pour aller plus loin : <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/audio" target="_blank">MDN - &lt;audio&gt;</a> | <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/video" target="_blank">MDN - &lt;video&gt;</a></p>
+    </div>
+</body>
+</html>

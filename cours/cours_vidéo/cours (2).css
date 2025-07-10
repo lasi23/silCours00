@@ -1,0 +1,411 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+  margin: 0;
+  padding: 0 0 40px 0;
+}
+
+h1, h2, h3 {
+  color: #2a4d7a;
+  margin-top: 32px;
+}
+
+h1 {
+  border-bottom: 2px solid #2a4d7a;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+h2 {
+  margin-top: 28px;
+  font-size: 1.3em;
+}
+
+pre {
+  background: #e3e9f3;
+  border-radius: 6px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  margin: 12px 0 24px 0;
+  font-size: 1em;
+}
+
+code {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  color: #1a3a5a;
+}
+
+article {
+  background: #fff;
+  border: 1px solid #d1dbe8;
+  border-radius: 8px;
+  padding: 18px 24px;
+  margin: 24px 0;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.important {
+  font-weight: bold;
+  color: #b30000;
+}
+
+#unique {
+  background: #fffbe6;
+  color: #222;
+  border-left: 4px solid #ffe066;
+  padding-left: 8px;
+}
+
+hr {
+  margin: 40px 0 32px 0;
+  border: none;
+  border-top: 2px dashed #b0c4de;
+}
+
+p {
+  line-height: 1.7;
+  margin: 12px 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 32px auto 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px #0002;
+  padding: 32px 36px;
+}
+
+/* Sélecteur descendant avancé */
+section p {
+  color: green;
+}
+
+/* Sélecteur adjacent (A+B) */
+h2 + p {
+  color: orange;
+  font-style: italic;
+}
+
+/* Sélecteur d'attribut */
+a[target="_blank"] {
+  color: #0077cc;
+  text-decoration: underline wavy;
+}
+
+/* Exemples de gestion du texte */
+.exemple-font-size {
+  font-size: 2em;
+}
+
+.exemple-font-family {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.exemple-font-style {
+  font-style: italic;
+}
+
+.exemple-font-weight {
+  font-weight: bold;
+}
+
+.exemple-text-decoration {
+  text-decoration: underline wavy red;
+}
+
+.exemple-text-align {
+  text-align: center;
+}
+
+.exemple-float {
+  float: right;
+  width: 200px;
+  background: #e3e9f3;
+  margin: 0 0 12px 12px;
+  padding: 8px;
+  border-radius: 6px;
+}
+/* règle CSS de la police */
+@font-face {
+  font-family: 'MaPolicePerso';
+  src: url('../fonts/IndieFlower-Regular.ttf') format('truetype');
+}
+
+.exemple-font-face {
+  font-family: 'MaPolicePerso', cursive;
+}
+
+/* Exemples de gestion des couleurs */
+.exemple-color {
+  color: #e74c3c;
+}
+
+.exemple-bgcolor {
+  background-color: #f9e79f;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.exemple-hex {
+  color: #3498db;
+}
+
+.exemple-rgb {
+  color: rgb(46, 204, 113);
+}
+
+.exemple-rgba {
+  background-color: rgba(52, 152, 219,0.1);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* --- Styles pour les formulaires de cours --- */
+.form-exemple {
+  background: #f4f8fb;
+  border: 1px solid #d1dbe8;
+  border-radius: 8px;
+  padding: 28px 24px 18px 24px;
+  margin: auto;
+  box-shadow: 0 2px 8px #0001;
+  max-width: 600px;
+}
+.form-exemple label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #2a4d7a;
+}
+.form-exemple input,
+.form-exemple select,
+.form-exemple textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #b0c4de;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-bottom: 10px;
+  background: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+.form-exemple input:focus,
+.form-exemple select:focus,
+.form-exemple textarea:focus {
+  border-color: #2a4d7a;
+  outline: none;
+}
+.form-exemple input[type="checkbox"],
+.form-exemple input[type="radio"] {
+  width: auto;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.form-exemple input[type="range"] {
+  width: 90%;
+}
+.form-exemple input[type="color"] {
+  width: 40px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.form-exemple input[type="file"] {
+  border: none;
+  background: none;
+}
+.form-exemple textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.btn-form {
+  background: #2a4d7a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 28px;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-top: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px #0001;
+  transition: background 0.2s;
+}
+.btn-form:hover,
+.btn-form:focus {
+  background: #1a2e4a;
+}
+/* Style pour les media queries */
+@media (max-width: 600px) {
+  body {
+    padding: 0 4vw 40px 4vw;
+  }
+  article {
+    padding: 12px 8px;
+  }
+  pre {
+    font-size: 0.95em;
+  }
+  .container {
+    padding: 12px 4vw;
+  }
+}
+
+/* --- Exemples visuels pour backgrounds CSS --- */
+.exemple-bg {
+  width: 320px;
+  height: 100px;
+  margin: 18px 0 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1.5px solid #b0c4de;
+  box-shadow: 0 2px 8px #0001;
+  font-size: 1.1em;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+.exemple-bg-color {
+  background-color: #ffe066;
+}
+.exemple-bg-image {
+  background-image: url('../images/drMario.png');
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.exemple-bg-gradient {
+  background-image: linear-gradient(90deg, #3498db, #e74c3c);
+  color: #fff;
+}
+.exemple-bg-repeat {
+  background-image: url('../images/drMario.png');
+  background-repeat: repeat;
+  background-size: 60px 60px;
+}
+.exemple-bg-no-repeat {
+  background-image: url('../images/drMario.png');
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  background-position: left top;
+}
+.exemple-bg-pos-center {
+  background-image: url('../images/drMario.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px 60px;
+}
+.exemple-bg-pos-right-bottom {
+  background-image: url('../images/drMario.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 60px 60px;
+}
+.exemple-bg-size-auto {
+  background-image: url('../images/drMario.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+.exemple-bg-size-cover {
+  background-image: url('../images/drMario.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.exemple-bg-size-contain {
+  background-image: url('../images/drMario.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.exemple-bg-attachment-fixed {
+  background-image: url('../images/drMario.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.exemple-bg-attachment-scroll {
+  background-image: url('../images/drMario.png');
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* --- Exemples visuels pour borders CSS --- */
+.exemple-border {
+  width: 320px;
+  height: 60px;
+  margin: 18px 0 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  font-weight: bold;
+  border-radius: 8px;
+  background: #f8f9fa;
+  font-size: 1.1em;
+  box-shadow: 0 2px 8px #0001;
+}
+.exemple-border-simple {
+  border: 2px solid #2a4d7a;
+}
+.exemple-border-dashed {
+  border-width: 4px;
+  border-style: dashed;
+  border-color: #e74c3c;
+}
+.exemple-border-individuelle {
+  border-top: 4px solid #3498db;
+  border-bottom: 4px dotted #e67e22;
+  border-left: none;
+  border-right: none;
+}
+.exemple-border-radius {
+  border: 2px solid #2a4d7a;
+  border-radius: 16px;
+}
+.exemple-border-outline {
+  border: 2px solid #fff;
+  outline: 3px dashed #b30000;
+}
+
+/* --- Styles pour la page audio/vidéo du cours --- */
+audio, video, iframe {
+  display: block;
+  margin: 22px auto 28px auto;
+  background: #f4f8fb;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+  max-width: 100%;
+}
+
+.media-exemple {
+  background: #e3e9f3;
+  border-radius: 10px;
+  padding: 18px 12px;
+  margin: 18px auto 28px auto;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 2px 8px #0001;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -8,13 +8,31 @@
     text-align: center;
 }
 
+
+
+
+    
+a {background-image: linear-gradient(to right, #52c234 0%, #061700  51%, #52c234  100%)}
+
 a {
-    cursor: pointer;
-    padding: 10px;
-    margin-top: 50px;
-     margin: 20px;
-    background-color: black;
-    color: white;
-    border-radius: 12px;
+    height: 5%;
+    width: 5%;
+    padding: 10px 45px;
+    margin-left: 44%;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 50%;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
 }
 
+a:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+         

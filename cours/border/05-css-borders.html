@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gérer les bordures en CSS</title>
+    <link rel="stylesheet" href="../back-ground/cours (3).css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gérer les bordures en CSS</h1>
+        <p>Les bordures permettent de délimiter, mettre en valeur ou styliser les éléments HTML. CSS offre de nombreuses propriétés pour personnaliser l’apparence des bordures.</p>
+
+        <h2>1. <code>border</code> : Propriété raccourcie</h2>
+        <p>Permet de définir en une seule ligne l’épaisseur, le style et la couleur de la bordure.</p>
+        <pre><code>div {
+    border: 2px solid #2a4d7a;
+}
+</code></pre>
+        <div class="exemple-border exemple-border-simple">border: 2px solid #2a4d7a;</div>
+
+        <h2>2. <code>border-width</code>, <code>border-style</code>, <code>border-color</code></h2>
+        <p>Pour contrôler séparément l’épaisseur, le style et la couleur :</p>
+        <pre><code>div {
+    border-width: 4px;
+    border-style: dashed;
+    border-color: #e74c3c;
+}
+</code></pre>
+        <div class="exemple-border exemple-border-dashed">Bordure en pointillés rouges</div>
+
+        <h2>3. Bordures individuelles</h2>
+        <p>On peut cibler chaque côté : <code>border-top</code>, <code>border-right</code>, <code>border-bottom</code>, <code>border-left</code></p>
+        <pre><code>div {
+    border-top: 4px solid #3498db;
+    border-bottom: 4px dotted #e67e22;
+}
+</code></pre>
+        <div class="exemple-border exemple-border-individuelle">Bordure haut et bas personnalisées</div>
+
+        <h2>4. <code>border-radius</code> : Bords arrondis</h2>
+        <p>Permet d’arrondir les coins d’un élément.</p>
+        <pre><code>div {
+    border: 2px solid #2a4d7a;
+    border-radius: 16px;
+}
+</code></pre>
+        <div class="exemple-border exemple-border-radius">border-radius: 16px</div>
+
+        <h2>5. <code>outline</code> : Contour externe</h2>
+        <p>Ajoute un contour autour de l’élément, sans décaler la mise en page.</p>
+        <pre><code>div {
+    outline: 3px dashed #b30000;
+}
+</code></pre>
+        <div class="exemple-border exemple-border-outline">outline: 3px dashed #b30000</div>
+
+        <h2>Styles de bordure disponibles</h2>
+        <ul>
+            <li><code>solid</code> : plein</li>
+            <li><code>dashed</code> : pointillés</li>
+            <li><code>dotted</code> : pointillés ronds</li>
+            <li><code>double</code> : double ligne</li>
+            <li><code>groove</code>, <code>ridge</code>, <code>inset</code>, <code>outset</code> : effets 3D</li>
+            <li><code>none</code> : pas de bordure</li>
+        </ul>
+
+        <h2>Bonnes pratiques</h2>
+        <ul>
+            <li>Utilisez les bordures pour structurer ou mettre en valeur, sans surcharger la page.</li>
+            <li>Combinez <code>border-radius</code> pour des boutons ou cartes modernes.</li>
+            <li>Privilégiez le contraste pour l’accessibilité.</li>
+        </ul>
+
+        <hr>
+        <p>Pour aller plus loin : <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border" target="_blank">MDN Web Docs - border</a></p>
+    </div>
+</body>
+</html>

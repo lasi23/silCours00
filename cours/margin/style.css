@@ -1,0 +1,16 @@
+h1{
+    background-color: aqua;
+}
+
+.container{
+    width: 50%;
+    background-color: slateblue;
+    color: darkseagreen;
+    margin-bottom: 5%;
+}
+.second-container{
+    width: 50%;
+    background-color: indianred;
+    color: blue;
+    padding-top: 4em;
+}
