@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gérer les Backgrounds en CSS</title>
+    <link rel="stylesheet" href="../back-ground/cours (3).css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gérer les backgrounds en CSS</h1>
+        <p>Les backgrounds (arrière-plans) permettent d'améliorer l'apparence de vos pages web. CSS offre de nombreuses propriétés pour personnaliser les couleurs, images et comportements d'arrière-plan.</p>
+
+        <h2>1. <code>background-color</code> : Couleur de fond</h2>
+        <p>Permet de définir la couleur d'arrière-plan d'un élément.</p>
+        <pre><code>body {
+    background-color: #f8f9fa;
+}
+</code></pre>
+        <div class="exemple-bg exemple-bg-color">Exemple de background-color</div>
+
+        <h2>2. <code>background-image</code> : Image de fond</h2>
+        <p>Permet d'ajouter une ou plusieurs images en arrière-plan.</p>
+        <pre><code>div {
+    background-image: url("/assets/images/drMario.png");
+}
+</code></pre>
+        <div class="exemple-bg exemple-bg-image">Exemple de background-image</div>
+        <p>On peut aussi utiliser des <strong>dégradés CSS</strong> :</p>
+        <pre><code>div {
+    background-image: linear-gradient(90deg, #3498db, #e74c3c);
+}
+</code></pre>
+        <div class="exemple-bg exemple-bg-gradient">Exemple de background dégradé</div>
+
+        <h2>3. <code>background-repeat</code> : Répétition de l'image</h2>
+        <p>Contrôle si l'image de fond se répète (par défaut oui).</p>
+        <pre><code>div {
+    background-image: url("/assets/images/drMario.png");
+    background-repeat: no-repeat;
+}
+</code></pre>
+        <div class="exemple-bg exemple-bg-repeat">repeat (défaut)</div>
+        <div class="exemple-bg exemple-bg-no-repeat">no-repeat</div>
+
+        <h2>4. <code>background-position</code> : Position de l'image</h2>
+        <p>Permet de placer l'image de fond à un endroit précis.</p>
+        <pre><code>div {
+    background-image: url("/assets/images/drMario.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+</code></pre>
+        <div class="exemple-bg exemple-bg-pos-center">background-position: center</div>
+        <div class="exemple-bg exemple-bg-pos-right-bottom">background-position: right bottom</div>
+
+        <h2>5. <code>background-size</code> : Taille de l'image</h2>
+        <p>Permet de redimensionner l'image de fond.</p>
+        <pre><code>div {
+    background-image: url("/assets/images/drMario.png");
+    background-size: cover;
+}
+</code></pre>
+        <div class="exemple-bg exemple-bg-size-auto">background-size: auto</div>
+        <div class="exemple-bg exemple-bg-size-cover">background-size: cover</div>
+        <div class="exemple-bg exemple-bg-size-contain">background-size: contain</div>
+
+        <h2>6. <code>background-attachment</code> : Fixer l'arrière-plan</h2>
+        <p>Définit si l'image de fond défile avec la page ou reste fixe.</p>
+        <pre><code>div {
+    background-image: url("/assets/images/drMario.png");
+    background-attachment: fixed;
+}
+</code></pre>
+        <div class="exemple-bg exemple-bg-attachment-fixed">background-attachment: fixed</div>
+        <div class="exemple-bg exemple-bg-attachment-scroll">background-attachment: scroll</div>
+
+        <h2>7. <code>background</code> : Propriété raccourcie</h2>
+        <p>Permet de définir toutes les propriétés d'arrière-plan en une seule ligne.</p>
+        <pre><code>div {
+    background: url("/assets/images/drMario.png") no-repeat center/cover #f8f9fa;
+}
+</code></pre>
+        <p>Ordre : <code>background-color</code> | <code>background-image</code> | <code>background-repeat</code> | <code>background-position</code> / <code>background-size</code> | <code>background-attachment</code></p>
+
+        <h2>Bonnes pratiques</h2>
+        <ul>
+            <li>Optimisez la taille de vos images pour de meilleures performances.</li>
+            <li>Utilisez les dégradés CSS pour des effets modernes sans images.</li>
+            <li>Testez le rendu sur différents écrans et tailles de fenêtre.</li>
+            <li>Pensez à l’accessibilité : gardez un bon contraste entre le fond et le texte.</li>
+        </ul>
+
+        <hr>
+        <p>Pour aller plus loin : <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background" target="_blank">MDN Web Docs - background</a></p>
+    </div>
+</body>
+</html>

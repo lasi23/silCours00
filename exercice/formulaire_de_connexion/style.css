@@ -3,19 +3,28 @@ h3 {
     text-align: center;
     color: #333;
 }
+<<<<<<< HEAD:exercice/formulaire de connexion/style.css
 
+=======
+  
+>>>>>>> 75acd7cbdcc98ffba7d0be988c81cfb4c9014ab9:exercice/formulaire_de_connexion/style.css
 .formulaire {
     margin-top: 0%;
     padding: auto;
     margin-left: 25%;
     width: 50%;
     margin-left: 25%;
-    border: solid 10px #ccc;
+    border: solid 10px #5758b4;
     padding: 10px;
     width: 40%;
+<<<<<<< HEAD:exercice/formulaire de connexion/style.css
     background-color: #3771f0;
 }
 
+=======
+    background-color: #85abfd;
+}
+>>>>>>> 75acd7cbdcc98ffba7d0be988c81cfb4c9014ab9:exercice/formulaire_de_connexion/style.css
 
 input {
     width: 95%;

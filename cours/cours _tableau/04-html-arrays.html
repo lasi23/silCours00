@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux en HTML</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #222;
+            margin: 0;
+            padding: 0 0 40px 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 32px auto 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 16px #0002;
+            padding: 32px 36px;
+        }
+        h1, h2, h3 {
+            color: #2a4d7a;
+        }
+        pre {
+            background: #e3e9f3;
+            border-radius: 6px;
+            padding: 12px 16px;
+            overflow-x: auto;
+            margin: 12px 0 24px 0;
+            font-size: 1em;
+        }
+        code {
+            font-family: 'Fira Mono', 'Consolas', monospace;
+            color: #1a3a5a;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 24px 0;
+            background: #f4f8fb;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px #0001;
+        }
+        th, td {
+            border: 1px solid #b0c4de;
+            padding: 12px 18px;
+            text-align: left;
+        }
+        th {
+            background: linear-gradient(90deg, #007cf0 0%, #00dfd8 100%);
+            color: #fff;
+        }
+        tr:nth-child(even) td {
+            background: #e3e9f3;
+        }
+        caption {
+            caption-side: top;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .important {
+            color: #b30000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Les tableaux en HTML</h1>
+        <p>Les tableaux permettent de présenter des données de façon structurée, sous forme de lignes et de colonnes. Ils sont très utilisés pour organiser des informations, des horaires, des résultats, etc.</p>
+
+        <h2>Structure de base d’un tableau</h2>
+        <p>Un tableau HTML est défini avec la balise <code>&lt;table&gt;</code>. Il est composé de lignes (<code>&lt;tr&gt;</code>), d’en-têtes (<code>&lt;th&gt;</code>) et de cellules (<code>&lt;td&gt;</code>).</p>
+        <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;En-tête 1&lt;/th&gt;
+        &lt;th&gt;En-tête 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Cellule 1&lt;/td&gt;
+        &lt;td&gt;Cellule 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+        <h2>Exemple de tableau stylisé</h2>
+        <table>
+            <caption>Exemple de tableau d’élèves</caption>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Âge</th>
+                    <th>Classe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dupont</td>
+                    <td>Marie</td>
+                    <td>16</td>
+                    <td>1ère</td>
+                </tr>
+                <tr>
+                    <td>Martin</td>
+                    <td>Lucas</td>
+                    <td>17</td>
+                    <td>Terminale</td>
+                </tr>
+                <tr>
+                    <td>Nguyen</td>
+                    <td>Linh</td>
+                    <td>15</td>
+                    <td>2nde</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Total : 3 élèves</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h2>Les balises importantes</h2>
+        <ul>
+            <li><code>&lt;table&gt;</code> : crée le tableau</li>
+            <li><code>&lt;tr&gt;</code> : crée une ligne</li>
+            <li><code>&lt;th&gt;</code> : crée une cellule d’en-tête (en gras, centrée par défaut)</li>
+            <li><code>&lt;td&gt;</code> : crée une cellule de données</li>
+            <li><code>&lt;thead&gt;</code> : regroupe l’en-tête du tableau</li>
+            <li><code>&lt;tbody&gt;</code> : regroupe le corps du tableau</li>
+            <li><code>&lt;tfoot&gt;</code> : regroupe le pied du tableau</li>
+            <li><code>&lt;caption&gt;</code> : ajoute un titre au tableau</li>
+        </ul>
+
+        <h2>Fusion de cellules : <code>colspan</code> et <code>rowspan</code></h2>
+        <p>On peut fusionner des cellules horizontalement (<code>colspan</code>) ou verticalement (<code>rowspan</code>) :</p>
+        <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th colspan="2"&gt;Fusion de 2 colonnes&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;Fusion de 2 lignes&lt;/td&gt;
+        &lt;td&gt;Cellule 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Cellule 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+        <h2>Bonnes pratiques</h2>
+        <ul>
+            <li>Utiliser <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> et <code>&lt;tfoot&gt;</code> pour structurer les tableaux complexes.</li>
+            <li>Ajouter une <code>&lt;caption&gt;</code> pour décrire le contenu du tableau.</li>
+            <li>Privilégier l’accessibilité : utiliser les balises sémantiques et penser à l’ordre de lecture.</li>
+            <li>Éviter les tableaux pour la mise en page : ils sont faits pour les données tabulaires !</li>
+        </ul>
+
+        <h2>Résumé</h2>
+        <p>Les tableaux HTML sont puissants pour organiser des données. Grâce aux balises sémantiques et aux attributs comme <code>colspan</code> et <code>rowspan</code>, ils peuvent s’adapter à de nombreux besoins. N’oublie pas de les styliser avec du CSS pour les rendre plus lisibles et agréables !</p>
+
+        <p class="important">Astuce : Pour des tableaux très complexes ou interactifs, il existe aussi des bibliothèques JavaScript spécialisées.</p>
+    </div>
+</body>
+</html>
