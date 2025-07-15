@@ -1,0 +1,43 @@
+#container {
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:repeat(4, auto);
+}
+
+h1 {
+    grid-column: 2;
+    grid-row: 1 / 1;
+    text-align: center;
+    color: darkblue;
+}
+
+nav { 
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    background-color: lightsalmon;
+    grid-column: 1 / 5;
+}
+
+ul {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column: 3;
+    
+}
+
+#article {
+    grid-column: 2/4;
+    background-color: rgb(122, 152, 197);
+    padding: 10px;
+ 
+}
+
+
+footer {
+    background-color: rgb(183, 180, 231);
+    grid-column: 1;
+    text-align: left;
+    padding: 10px;
+}
