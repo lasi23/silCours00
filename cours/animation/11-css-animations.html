@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions et Animations CSS</title>
+    <link rel="stylesheet" href="cours (3).css">
+    <style>
+        /* Exemples de transitions */
+        .exemple-transition {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 20px;
+            display: inline-block;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+        }
+        
+        .exemple-transition:hover {
+            background-color: #e74c3c;
+            transform: scale(1.2) rotate(10deg);
+            border-radius: 50%;
+        }
+        
+        .timing-linear { transition-timing-function: linear; }
+        .timing-ease { transition-timing-function: ease; }
+        .timing-ease-in { transition-timing-function: ease-in; }
+        .timing-ease-out { transition-timing-function: ease-out; }
+        .timing-ease-in-out { transition-timing-function: ease-in-out; }
+        
+        /* Exemples d'animations */
+        .exemple-animation {
+            width: 100px;
+            height: 100px;
+            background-color: #9b59b6;
+            margin: 20px;
+            display: inline-block;
+        }
+        
+        .anim-bounce {
+            animation-name: bounce;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        .anim-rotate {
+            animation-name: rotate;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        
+        .anim-pulse {
+            animation-name: pulse;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        .anim-shake {
+            animation-name: shake;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        
+        /* Keyframes */
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-30px); }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); background-color: #9b59b6; }
+            100% { transform: scale(1.2); background-color: #e74c3c; }
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+        
+        /* Bouton interactif */
+        .btn-interactif {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+        
+        .btn-interactif:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #2980b9, #3498db);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Transitions et Animations CSS</h1>
+        <p>Les transitions et animations CSS permettent d'ajouter du mouvement et des effets visuels à vos pages web sans JavaScript, améliorant ainsi l'expérience utilisateur.</p>
+
+        <h2>1. Transitions CSS</h2>
+        <p>Les transitions permettent de modifier progressivement les propriétés CSS d'un élément, créant ainsi un effet de transition fluide entre deux états.</p>
+        
+        <h3>Propriétés de transition</h3>
+        <ul>
+            <li><code>transition-property</code> : Propriété(s) CSS à animer</li>
+            <li><code>transition-duration</code> : Durée de la transition</li>
+            <li><code>transition-timing-function</code> : Courbe d'accélération</li>
+            <li><code>transition-delay</code> : Délai avant le début de la transition</li>
+            <li><code>transition</code> : Propriété raccourcie</li>
+        </ul>
+        
+        <h3>Exemple de transition</h3>
+        <pre><code>.element {
+    background-color: blue;
+    transition-property: background-color, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+/* Version raccourcie */
+.element {
+    background-color: blue;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.element:hover {
+    background-color: red;
+    transform: scale(1.2);
+}</code></pre>
+        
+        <div class="exemple-transition"></div>
+        
+        <h3>Fonctions de timing</h3>
+        <p>Les fonctions de timing contrôlent la vitesse de la transition tout au long de sa durée :</p>
+        
+        <div class="exemple-transition timing-linear"></div> <span>linear</span>
+        <div class="exemple-transition timing-ease"></div> <span>ease (défaut)</span>
+        <div class="exemple-transition timing-ease-in"></div> <span>ease-in</span>
+        <div class="exemple-transition timing-ease-out"></div> <span>ease-out</span>
+        <div class="exemple-transition timing-ease-in-out"></div> <span>ease-in-out</span>
+        
+        <h2>2. Animations CSS</h2>
+        <p>Les animations CSS permettent de créer des séquences d'animation plus complexes avec plusieurs étapes intermédiaires.</p>
+        
+        <h3>Propriétés d'animation</h3>
+        <ul>
+            <li><code>animation-name</code> : Nom de l'animation (défini par @keyframes)</li>
+            <li><code>animation-duration</code> : Durée de l'animation</li>
+            <li><code>animation-timing-function</code> : Courbe d'accélération</li>
+            <li><code>animation-delay</code> : Délai avant le début de l'animation</li>
+            <li><code>animation-iteration-count</code> : Nombre de répétitions (nombre ou infinite)</li>
+            <li><code>animation-direction</code> : Direction de l'animation (normal, reverse, alternate, alternate-reverse)</li>
+            <li><code>animation-fill-mode</code> : État avant/après l'animation (none, forwards, backwards, both)</li>
+            <li><code>animation-play-state</code> : État de lecture (running, paused)</li>
+            <li><code>animation</code> : Propriété raccourcie</li>
+        </ul>
+        
+        <h3>Keyframes</h3>
+        <p>Les keyframes définissent les étapes intermédiaires d'une animation :</p>
+        
+        <pre><code>@keyframes monAnimation {
+    0% {
+        transform: scale(1);
+        background-color: blue;
+    }
+    50% {
+        transform: scale(1.5);
+        background-color: purple;
+    }
+    100% {
+        transform: scale(1);
+        background-color: red;
+    }
+}
+
+.element {
+    animation-name: monAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Version raccourcie */
+.element {
+    animation: monAnimation 2s infinite alternate;
+}</code></pre>
+        
+        <h3>Exemples d'animations</h3>
+        <div class="exemple-animation anim-bounce"></div> <span>Rebond (bounce)</span>
+        <div class="exemple-animation anim-rotate"></div> <span>Rotation</span>
+        <div class="exemple-animation anim-pulse"></div> <span>Pulsation</span>
+        <div class="exemple-animation anim-shake"></div> <span>Tremblement</span>
+        
+        <h2>3. Cas d'utilisation courants</h2>
+        <ul>
+            <li>Feedback visuel sur les interactions (hover, focus, active)</li>
+            <li>Transitions entre les états d'interface (ouverture/fermeture de menu)</li>
+            <li>Indicateurs de chargement</li>
+            <li>Animations d'entrée/sortie d'éléments</li>
+            <li>Effets parallaxe</li>
+        </ul>
+        
+        <h3>Exemple de bouton interactif</h3>
+        <button class="btn-interactif">Cliquez-moi</button>
+        
+        <pre><code>.btn-interactif {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    transition: all 0.3s ease;
+}
+
+.btn-interactif:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}</code></pre>
+        
+        <h2>4. Bonnes pratiques</h2>
+        <ul>
+            <li>Privilégiez les transitions/animations des propriétés <code>transform</code> et <code>opacity</code> pour de meilleures performances</li>
+            <li>Évitez d'animer des propriétés qui déclenchent des reflows (layout, width, height, etc.)</li>
+            <li>Utilisez des durées raisonnables (0.2s à 0.5s pour les transitions, 1s à 3s pour les animations)</li>
+            <li>Respectez la préférence utilisateur <code>prefers-reduced-motion</code> pour l'accessibilité</li>
+            <li>N'abusez pas des animations qui peuvent distraire l'utilisateur</li>
+        </ul>
+        
+        <pre><code>@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}</code></pre>
+        
+        <hr>
+        <p>Pour aller plus loin :</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" target="_blank">MDN Web Docs - Transitions CSS</a></li>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations" target="_blank">MDN Web Docs - Animations CSS</a></li>
+            <li><a href="https://cubic-bezier.com/" target="_blank">Cubic Bezier - Outil pour créer des fonctions de timing personnalisées</a></li>
+            <li><a href="https://animista.net/" target="_blank">Animista - Bibliothèque d'animations CSS</a></li>
+        </ul>
+    </div>
+</body>
+</html>

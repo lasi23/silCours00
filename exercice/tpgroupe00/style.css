@@ -1,8 +1,85 @@
 photo {
-    margin: 25%;
+    display: flex;
+    justify-content: center;
+
 }
 
 body {
     background-color: #000000;
     font-family: Arial, sans-serif;
 }
+
+.navbar {
+    background-color: rgb(21, 21, 24);
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    color: white;
+    font-size: small;
+}
+
+.navbar ul {
+
+    display: flex;
+    list-style-type: none;
+}
+.navbar ul li {
+            margin-right: 50px;
+
+        }
+
+.navbar ul li a {
+            text-decoration: none;
+            color:#ccc ;
+        }
+        header{
+            background-color: rgb(21, 21, 24);
+
+        }
+
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: rgb(207, 198, 198);
+    box-shadow: 0 0 10px rgba(173, 13, 13, 0.1);
+    background: linear-gradient(90deg, rgb(7, 7, 26), rgb(61, 5, 5));
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+tr:first-child td {
+    background-color: #650606;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h1 {
+    color: red;
+    display: flex;
+    justify-content: center;
+
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    background: linear-gradient(#a71e5e, #813878, #ffe4e1 );
+}
+
+footer {
+    display: flex;
+   justify-content: center ;
+}
+#Kathy {
+    color: rgb(255, 255, 255);
+}
+
+
