@@ -1,85 +1,43 @@
-photo {
-    display: flex;
-    justify-content: center;
-
-}
-
 body {
     background-color: #000000;
     font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.navbar {
-    background-color: rgb(21, 21, 24);
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-    color: white;
-    font-size: small;
+
+
+header {
+    grid-column: 1 / 5;
+    grid-template-rows: 1fr 1fr;
+    background-color: #333333;
+    text-align: center;
 }
 
-.navbar ul {
+.logo {
+    width: 200px;
+    background-color: aliceblue;
+    color: aqua;
+    grid-column: 1;
+}
 
-    display: flex;
+ul {
+    grid-column: 4;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    background-color: #a11212;
+    grid-row: 3;
+    grid-column: 5;
     list-style-type: none;
 }
-.navbar ul li {
-            margin-right: 50px;
 
-        }
-
-.navbar ul li a {
-            text-decoration: none;
-            color:#ccc ;
-        }
-        header{
-            background-color: rgb(21, 21, 24);
-
-        }
-
-
-table {
-    border-collapse: collapse;
-    width: 60%;
-    margin: 30px auto;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: rgb(207, 198, 198);
-    box-shadow: 0 0 10px rgba(173, 13, 13, 0.1);
-    background: linear-gradient(90deg, rgb(7, 7, 26), rgb(61, 5, 5));
+photo {
+    background-color: #a11212;
+    grid-row: 2;
+    grid-column: 2;
+    align-self: center;
 }
-
-td {
-    border: 1px solid #ccc;
-    padding: 12px 15px;
-    text-align: left;
-}
-
-tr:first-child td {
-    background-color: #650606;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-h1 {
-    color: red;
-    display: flex;
-    justify-content: center;
-
-}
-h2 {
-    display: flex;
-    justify-content: center;
-    color: black;
-    background: linear-gradient(#a71e5e, #813878, #ffe4e1 );
-}
-
-footer {
-    display: flex;
-   justify-content: center ;
-}
-#Kathy {
-    color: rgb(255, 255, 255);
-}
-
-
