@@ -11,11 +11,8 @@ img {
 
 .img2 {
     border-radius: 250px;
-    animation-name: rotate;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
- }
+    animation: rotate 4s infinite linear;
+}
 
 @keyframes rotate {
     from { transform: rotate(0deg); }
