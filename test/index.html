@@ -3,37 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placements FLEXBOX</title>
+    <title>Document</title>
     <style>
-        .container{
-                height: 100px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: flex-start;
-                padding: 1%;
-                background-color: rgb(111, 134, 157);
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid chartreuse;
+        }
+        @keyframes test {
+  0% {
+    border-radius: 50%;
+    border: 5px solid chartreuse;
+  }
+  50% {
+    border-radius: 0%;
+    border: 5px solid chartreuse;
+  }
+ 100% {
+    border-radius: 50%;
+    border: 5px solid chartreuse;
+  }
 }
-
-#el1{
-    background-color: rgb(0, 157, 255);
+img:hover{
+    animation-name: test;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
-#el2{
-    background-color: rgb(114, 232, 114);
-}
-#el3{
-    background-color: rgb(246, 0, 0);
-    align-items: flex-end;
-}
-
     </style>
 </head>
 <body>
-    <h1>Test Flexbox</h1>
-    <div class="container">
-        <div id="el1" class="element">Item 1</div>
-        <div id="el2" class="element">Item 2</div>
-        <div id="el3" class="element">Item 3</div>
-    </div>
+    <a href="https://tenor.com/fr/view/hooty-jeff-gif-27562354">
+        < src="hooty-jeff.gif" alt="">
+    </>
 </body>
 </html>

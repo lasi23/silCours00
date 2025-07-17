@@ -1,0 +1,145 @@
+
+* {
+    margin: 0;
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ff8529;
+    background-image: linear-gradient(135deg, #fec279 0%, #1672ff 100%);
+
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 45%;
+    /* Pour un affichage correct sur de petits écrans */
+}
+
+section h2 {
+    color: #333;
+}
+
+section p {
+    color: #666;
+}
+
+section a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+section img {
+    float: left;
+    /* Aligner l'image à gauche */
+    margin-left: 20px;
+    /* Ajouter un espace à gauche de l'image */
+    max-width: 40%;
+    /* Taille maximale de l'image */
+    height: auto;
+    /* Hauteur automatique pour conserver les proportions */
+    margin: 1%;
+}
+
+form {
+    padding: 0 20%;
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+        margin-top: 1%;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* @media screen and (max-width: 768px) {
+    header {
+    background-color: #68d1e4;
+}
+}
+
+@media screen and (max-width: 600px) {
+     header {
+    background-color: #f7f200;
+    }
+}
+
+@media screen and (min-width: 390px) and (max-width: 480px)  {
+      header {
+    background-color: #ee1212;
+    }
+
+    main {
+    flex-direction: column;
+    }
+
+    section {
+    width: 100%;
+}
+} */
+
+@media screen and (max-width: 667px) and (orientation: landscape)  {
+    header {
+  background: #2A7B9B;
+  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    }
+    
+}
+
+
+
