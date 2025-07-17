@@ -54,7 +54,7 @@ margin: 0%;
 }
 
 .img5:hover {
-    animation: flip 10s;
+    animation: flip 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   

@@ -107,13 +107,13 @@ footer {
     margin-top: 20px;
 }
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     header {
     background-color: #68d1e4;
 }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
      header {
     background-color: #f7f200;
     }
@@ -129,9 +129,9 @@ footer {
     }
 
     section {
-    width: 100%;
+    width: 90%;
 }
-} */
+}
 
 @media screen and (max-width: 667px) and (orientation: landscape)  {
     header {
