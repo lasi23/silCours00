@@ -54,7 +54,7 @@ margin: 0%;
 }
 
 .img5:hover {
-    animation: flip 10s;
+    animation: flip 5s infinite linear;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   
@@ -74,4 +74,15 @@ margin: 0%;
     100% { transform: skew(100deg, 100deg); }   
    
 }
+
+.img6 {
+    width: 200px;
+    height: auto;
+    animation: harryfly 5s infinite ;
+}
  
+@keyframes harryfly {
+   from { margin-left: 0%; }
+    50% { transform: rotate(1turn); }
+    to { margin-left: 100%; }
+   }
