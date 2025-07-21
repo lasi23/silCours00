@@ -1,17 +1,28 @@
-.container{
-    width: 50%;
-    background-color: slateblue;
-    color: darkseagreen;
-}
+        .fond {
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            z-index: 2;
+            background-color: rgb(149, 255, 0);
+        }
 
-h1{
-    background-color: aqua;
-}
+        .avant {
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            z-index: 1;
+            background-color: red;
+            padding-top: 80px;
+            padding-left: 200px;
+        }
 
-h2{
-    display: inline-block;
-    background: linear-gradient(#a71e5e, #813878, #ffe4e1 );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+        i {
+            position: absolute;
+            font-style: normal;
+            font-weight: bold;
+            color: rgb(194, 35, 173);
+            z-index: 3;
+            margin-top: 110px;
+            margin-left: 190px;
+
+        }

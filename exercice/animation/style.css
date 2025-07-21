@@ -54,15 +54,8 @@ margin: 0%;
 }
 
 .img5:hover {
-<<<<<<< HEAD
-    animation: flip 5s;
-=======
-    animation: flip 5s infinite linear;
->>>>>>> 94bbc91e8aadac9c363cd9903c3556ccf6775cc7
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  
-}
+
+    animation: flip 5s;}
 
 @keyframes flip {
     0% { transform: skew(0deg, 0deg); }

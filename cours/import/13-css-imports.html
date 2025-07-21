@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le système d'import en CSS</title>
+    <link rel="stylesheet" href="../../cours/animation/cours (3).css">
+</head>
+<body>
+    <div class="container">
+        <h1>Le système d'import en CSS</h1>
+        <p>La règle <code>@import</code> permet d'importer des feuilles de style externes dans un fichier CSS. C'est un outil puissant pour organiser et modulariser vos styles.</p>
+
+        <h2>1. Syntaxe de base</h2>
+        <p>La règle <code>@import</code> doit être placée au début du fichier CSS, avant toute autre règle (sauf <code>@charset</code> et <code>@layer</code>).</p>
+        
+        <div class="exemple-import">
+            <h3>Syntaxes possibles :</h3>
+            <pre><code>/* Avec une chaîne de caractères */
+@import "styles.css";
+
+/* Avec la fonction url() */
+@import url("styles.css");
+@import url(styles.css);
+
+/* Avec des conditions media */
+@import "mobile.css" screen and (max-width: 768px);
+
+/* Avec des layers (cascade layers) */
+@import "base.css" layer(base);
+
+/* Avec des conditions de support */
+@import "modern.css" supports(display: grid);</code></pre>
+        </div>
+
+        <h2>2. Règles de placement</h2>
+        <div class="warning">
+            <strong>⚠️ Important :</strong> Les règles <code>@import</code> doivent être placées au début du fichier CSS, avant toute autre règle de style.
+        </div>
+        
+        <h3>✅ Correct :</h3>
+        <pre><code>@import "reset.css";
+@import "typography.css";
+@import "layout.css";
+
+/* Ensuite vos règles CSS */
+body {
+    margin: 0;
+    padding: 0;
+}</code></pre>
+        
+        <h3>❌ Incorrect :</h3>
+        <div class="error">
+            <pre><code>body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Cette règle @import sera ignorée ! */
+@import "styles.css";</code></pre>
+        </div>
+
+        <h2>3. Import avec conditions media</h2>
+        <p>Vous pouvez conditionner l'import selon le type de média ou les caractéristiques de l'écran :</p>
+        
+        <pre><code>/* Import conditionnel selon la taille d'écran */
+@import "mobile.css" screen and (max-width: 768px);
+@import "tablet.css" screen and (min-width: 769px) and (max-width: 1024px);
+@import "desktop.css" screen and (min-width: 1025px);
+
+/* Import pour l'impression */
+@import "print.css" print;
+
+/* Import pour tous les médias */
+@import "base.css" all;</code></pre>
+
+        <h2>4. Import avec conditions de support</h2>
+        <p>La fonction <code>supports()</code> permet d'importer des styles seulement si certaines propriétés CSS sont supportées :</p>
+        
+        <pre><code>/* Import si CSS Grid est supporté */
+@import "grid-layout.css" supports(display: grid);
+
+/* Import si Flexbox n'est PAS supporté */
+@import "fallback.css" supports(not (display: flex));
+
+/* Import avec conditions multiples */
+@import "modern.css" supports((display: grid) and (display: flex));</code></pre>
+
+        <h2>5. Cascade Layers avec @import</h2>
+        <p>Les cascade layers permettent de contrôler l'ordre de priorité des styles :</p>
+        
+        <pre><code>/* Création de layers avec import */
+@import "reset.css" layer(reset);
+@import "base.css" layer(base);
+@import "components.css" layer(components);
+@import "utilities.css" layer(utilities);
+
+/* Définition de l'ordre des layers */
+@layer reset, base, components, utilities;
+
+/* Import dans un layer existant */
+@import "more-components.css" layer(components);</code></pre>
+
+        <h2>6. Exemples pratiques</h2>
+        
+        <h3>Organisation modulaire d'un projet</h3>
+        <div class="success">
+            <pre><code>/* main.css - Fichier principal */
+@import "normalize.css";
+@import "variables.css";
+@import "typography.css";
+@import "layout.css";
+@import "components.css";
+@import "utilities.css";
+
+/* Imports conditionnels */
+@import "dark-theme.css" (prefers-color-scheme: dark);
+@import "high-contrast.css" (prefers-contrast: high);</code></pre>
+        </div>
+        
+        <h3>Import de polices Google Fonts</h3>
+        <pre><code>/* Import de polices externes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');</code></pre>
+
+        <h2>7. Performance et bonnes pratiques</h2>
+        
+        <div class="warning">
+            <h3>⚠️ Considérations de performance</h3>
+            <ul>
+                <li>Chaque <code>@import</code> crée une requête HTTP supplémentaire</li>
+                <li>Les imports sont bloquants (le CSS suivant attend que l'import soit chargé)</li>
+                <li>Les imports imbriqués peuvent créer des chaînes de dépendances lentes</li>
+            </ul>
+        </div>
+        
+        <h3>Alternatives recommandées :</h3>
+        <ul>
+            <li><strong>Balises &lt;link&gt;</strong> dans le HTML (chargement parallèle)</li>
+            <li><strong>Outils de build</strong> (Webpack, Sass, etc.) pour concaténer les fichiers</li>
+            <li><strong>HTTP/2</strong> pour optimiser les requêtes multiples</li>
+        </ul>
+        
+        <div class="exemple-import">
+            <h3>Comparaison :</h3>
+            <pre><code><!-- Méthode recommandée avec &lt;link&gt; -->
+&lt;link rel="stylesheet" href="reset.css"&gt;
+&lt;link rel="stylesheet" href="main.css"&gt;
+&lt;link rel="stylesheet" href="responsive.css"&gt;
+
+/* Vs méthode @import */
+@import "reset.css";
+@import "main.css";
+@import "responsive.css";</code></pre>
+        </div>
+
+        <h2>8. Cas d'usage appropriés</h2>
+        <ul>
+            <li><strong>Développement :</strong> Organisation modulaire du code</li>
+            <li><strong>Polices web :</strong> Import de Google Fonts ou autres CDN</li>
+            <li><strong>Cascade layers :</strong> Contrôle fin de la priorité des styles</li>
+            <li><strong>Conditions media/support :</strong> Chargement conditionnel de styles</li>
+            <li><strong>Thèmes :</strong> Import conditionnel selon les préférences utilisateur</li>
+        </ul>
+
+        <h2>9. Erreurs courantes à éviter</h2>
+        
+        <div class="error">
+            <h3>❌ Erreurs fréquentes :</h3>
+            <ul>
+                <li>Placer <code>@import</code> après d'autres règles CSS</li>
+                <li>Oublier les guillemets autour des URLs</li>
+                <li>Créer des imports circulaires (A importe B qui importe A)</li>
+                <li>Abuser des imports pour de petits fichiers (impact performance)</li>
+                <li>Ne pas gérer les chemins relatifs correctement</li>
+            </ul>
+        </div>
+
+        <h2>10. Exemple complet d'architecture</h2>
+        <pre><code>/* styles/main.css */
+@charset "UTF-8";
+
+/* Imports de base */
+@import "normalize.css";
+@import "variables.css" layer(base);
+@import "typography.css" layer(base);
+
+/* Imports de composants */
+@import "buttons.css" layer(components);
+@import "forms.css" layer(components);
+@import "navigation.css" layer(components);
+
+/* Imports conditionnels */
+@import "print.css" print;
+@import "mobile.css" screen and (max-width: 768px);
+@import "dark-mode.css" (prefers-color-scheme: dark);
+
+/* Imports avec support */
+@import "grid-layout.css" supports(display: grid);
+@import "flexbox-fallback.css" supports(not (display: grid));
+
+/* Définition de l'ordre des layers */
+@layer base, components, utilities;</code></pre>
+
+        <hr>
+        <p><strong>Ressources utiles :</strong></p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/@import" target="_blank">MDN Web Docs - @import</a></li>
+            <li><a href="https://web.dev/css-cascade-layers/" target="_blank">CSS Cascade Layers</a></li>
+            <li><a href="https://caniuse.com/css-import" target="_blank">Support navigateur pour @import</a></li>
+        </ul>
+    </div>
+</body>
+</html>
